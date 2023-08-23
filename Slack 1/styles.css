@@ -1,0 +1,167 @@
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+li,
+a {
+    list-style: none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* ENCABEZADO */
+.header {
+    background-color: #001F3F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: end;
+    align-items: center;
+}
+
+.img {
+    height: 100px;
+}
+
+.encabezado {
+    margin-right: 20px;
+    text-align: center;
+}
+
+
+/* BARRA LATERAL */
+.nav {
+    height: 100vh;
+    background-color: #f4f4f4;
+    width: 200px;
+    float: left;
+    padding: 20px;
+}
+
+.menu {
+    list-style: none;
+}
+
+
+.li {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.li:hover {
+    font-size: 20px;
+    color: #696969;
+    transform: scale(100px);
+}
+
+/* CONTENIDO PRINCIPAL */
+.main {
+    height: 100vh;
+    margin-left: 220px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sesion {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenedorM {
+    margin-top: 100px;
+    width: 400px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inputSubmit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inputSubmit:hover {
+    background-color: #0056b3;
+}
+
+/* PIE DE PAGINA */
+.footer {
+    clear: both;
+    background-color: #001F3F;
+    color: #fff;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+.cajaIcons {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.boxFooter {
+    margin: 10px;
+}
+
+.cajaUl {
+    display: flex;
+}
+
+.icon {
+    color: #FFFFFF;
+}
+
+.footerP:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.footerP:hover {
+    color: #ccc;
+    transform: scale(100px);
+}
+
+.aIcon {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.aIcon:hover {
+    transform: scale(100px);
+}
+
+
+@media (max-width:650px) {
+    .cajaUl {
+        flex-direction: column;
+    }
+}
