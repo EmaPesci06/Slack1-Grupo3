@@ -67,6 +67,10 @@ a {
     transform: scale(100px);
 }
 
+.contenedorf {
+    margin-top: 40px;
+}
+
 /* CONTENIDO PRINCIPAL */
 .main {
     height: 100vh;
@@ -74,6 +78,16 @@ a {
     padding: 20px;
     display: flex;
     justify-content: center;
+}
+
+.moneda {
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+.tituloMoneda {
+    text-align: center;
 }
 
 .sesion {
@@ -86,12 +100,69 @@ a {
     width: 400px;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.inputMoneda,
+.inputPrestamo {
+    margin: 0 auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.inputMoneda {
+
+    width: 300px;
+}
+
+select {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+}
+
 .inputField {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.options {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+label {
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a76d8;
 }
 
 .inputSubmit {
@@ -107,6 +178,39 @@ a {
 
 .inputSubmit:hover {
     background-color: #0056b3;
+}
+
+.resultBox {
+    font-size: 20px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.containerPrestamo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.tituloPrestamo {
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 20px;
+}
+
+.containerLabel {
+    display: flex;
+    flex-direction: column;
 }
 
 /* PIE DE PAGINA */

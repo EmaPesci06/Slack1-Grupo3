@@ -30,7 +30,7 @@
     </header>
 
     <nav class="nav">
-        <h3 class="navbar">Menú</h3>
+        <h2 class="navbar">Menú</h2>
         <ul class="menu">
             <li><a href="../index.html" class="li">Inicio</a></li>
             <li><a href="cuentas.html" class="li">Cuentas</a></li>
@@ -39,7 +39,7 @@
         </ul>
 
         <div class="contenedorf">
-            <h3>Funciones</h3>
+            <h2>Funciones</h2>
             <ul class="menu">
                 <li><a href="moneda.html" class="li">Conversion de Moneda</a></li>
                 <li><a href="prestamos.html" class="li">Calculadora de Prestamos</a></li>
@@ -47,9 +47,29 @@
         </div>
     </nav>
 
-    <main class="main">
+    <main class="main moneda">
+        <h2 class="tituloMoneda">Conversor de moneda</h2>
 
-        <h1>Cuentas</h1>
+        <div class="containerM">
+            <form action="" class="containerForm">
+                <label for="moneda">Ingrese cantidad que quiere convertir</label>
+                <input type="number" class="inputMoneda" name="moneda" id="moneda" step="0.1" placeholder="0">
+
+                <div class="options">
+                    <label for="currency">Moneda de destino</label>
+                    <select name="" id="currency">
+                        <option value="DOLAR BLUE">DOLAR BLUE</option>
+                        <option value="EUR">EURO</option>
+                        <option value="DOLAR" data-image="../">DOLAR OFICIAL</option>
+                        <option value="RENMIBINI">YUAN</option>
+                        <option value="RUBLO">RUBLO</option>
+                    </select>
+                    <button id="result" type="button">Convertir</button>
+                    <div id="resultBox"></div>
+                </div>
+            </form>
+
+        </div>
     </main>
 
     <footer class="footer">
@@ -85,7 +105,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../script.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/moneda.js"></script>
 </body>
 
 </html>

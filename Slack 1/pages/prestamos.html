@@ -30,7 +30,7 @@
     </header>
 
     <nav class="nav">
-        <h3 class="navbar">Menú</h3>
+        <h2 class="navbar">Menú</h2>
         <ul class="menu">
             <li><a href="../index.html" class="li">Inicio</a></li>
             <li><a href="cuentas.html" class="li">Cuentas</a></li>
@@ -39,17 +39,37 @@
         </ul>
 
         <div class="contenedorf">
-            <h3>Funciones</h3>
+            <h2>Funciones</h2>
             <ul class="menu">
                 <li><a href="moneda.html" class="li">Conversion de Moneda</a></li>
                 <li><a href="prestamos.html" class="li">Calculadora de Prestamos</a></li>
             </ul>
         </div>
     </nav>
-
     <main class="main">
+        <div class="containerPrestamo">
 
-        <h1>Cuentas</h1>
+            <h2 class="tituloPrestamo">Calculadora de Prestamos</h2>
+            <div class="calculator">
+                <div class="containerLabel">
+                    <label for="loanAmount">Monto del Préstamo:</label>
+                    <input class="inputPrestamo" type="number" id="loanAmount" step="0.01" required>
+                </div>
+
+                <div class="containerLabel">
+                    <label for="interestRate">Tasa de Interés (% anual):</label>
+                    <input class="inputPrestamo" type="number" id="interestRate" step="0.01" required>
+                </div>
+
+                <div class="containerLabel">
+                    <label for="loanTerm">Plazo del Préstamo (años):</label>
+                    <input class="inputPrestamo" type="number" id="loanTerm" required>
+                </div>
+                <button id="calculateButton">Calcular</button>
+
+                <div id="result"></div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -85,7 +105,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../script.js"></script>
+    <script src="/scripts/prestamos.js"></script>
 </body>
 
 </html>
