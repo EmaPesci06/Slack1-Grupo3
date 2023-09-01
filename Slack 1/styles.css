@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 li,
 a {
     list-style: none;
@@ -24,13 +25,17 @@ a {
 
 .contenedor {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     justify-items: end;
     align-items: center;
 }
 
 .img {
     height: 100px;
+    position: relative;
+    top: 0;
+    right: 47px;
+
 }
 
 .encabezado {
@@ -38,20 +43,37 @@ a {
     text-align: center;
 }
 
+.logout {
+    font-size: 30px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.logout:hover {
+    color: #ccc;
+    transform: scale(1.1);
+}
 
 /* BARRA LATERAL */
-.nav {
-    height: 100vh;
-    background-color: #f4f4f4;
-    width: 200px;
-    float: left;
-    padding: 20px;
+
+.contenedorNyM {
+    display: flex;
 }
 
-.menu {
+.navP {
+    background-color: #f4f4f4;
+    padding: 20px;
+    flex: 0.3;
+}
+
+.main {
+    padding: 20px;
+    flex: 2;
+}
+
+.menuP {
     list-style: none;
 }
-
 
 .li {
     display: block;
@@ -73,18 +95,127 @@ a {
 
 /* CONTENIDO PRINCIPAL */
 .main {
-    height: 100vh;
-    margin-left: 220px;
+    min-height: 511px;
     padding: 20px;
     display: flex;
     justify-content: center;
 }
+
+.mainPago {
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.mainT {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 20px;
+}
+
+.payment-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.payment-item:hover {
+    background-color: #ccc;
+}
+
+.paymentTitle {
+    display: block;
+    margin-top: 20px;
+    grid-column: 2/4;
+}
+
+.paragraphDate {
+    display: block;
+    margin-top: 20px;
+    grid-column: 1/2;
+}
+
+.paragraphAmount {
+    display: block;
+    margin-top: 20px;
+    grid-column: 2/3;
+}
+
+.paragraphDescription {
+    display: block;
+    margin-top: 20px;
+    grid-column: 3/5;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* Estilos para los iconos */
+.prev-button,
+.next-button {
+    background-color: rgba(0, 0, 0, 0.0);
+    /* Fondo semi-transparente */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    /* Tamaño del icono */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+
 
 .moneda {
     justify-content: flex-start;
     flex-direction: column;
 }
 
+#currency {
+    margin-bottom: 20px;
+}
+
+#calculateButton {
+    margin-top: 20px;
+}
 
 .tituloMoneda {
     text-align: center;
@@ -96,7 +227,7 @@ a {
 }
 
 .contenedorM {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 400px;
 }
 
@@ -115,7 +246,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .inputMoneda {
-
     width: 300px;
 }
 
@@ -192,16 +322,17 @@ button:hover {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    margin-top: 30px;
 }
 
 .containerPrestamo {
-    display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
 .tituloPrestamo {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 label {
@@ -211,6 +342,27 @@ label {
 .containerLabel {
     display: flex;
     flex-direction: column;
+}
+
+.containerM {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.containerA {
+    padding: 20px;
+}
+
+
+.formContainer {
+    width: 100%;
 }
 
 /* PIE DE PAGINA */
@@ -224,12 +376,21 @@ label {
 .container {
     display: flex;
     margin-right: 20px;
+    margin-top: 20px;
     justify-content: space-between;
+}
+
+.containerCuenta {
+    display: flex;
+    margin-right: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 1100px;
 }
 
 .cajaIcons {
     display: flex;
-    flex-direction: column;
     transition: all 0.3s ease-in-out;
 }
 
@@ -245,24 +406,31 @@ label {
     color: #FFFFFF;
 }
 
-.footerP:hover {
+.footerP {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
     transition: all 0.3s ease-in-out;
 }
 
 .footerP:hover {
     color: #ccc;
-    transform: scale(100px);
+    transform: translateY(-10px);
 }
 
 .aIcon {
-    display: block;
+    font-size: 25px;
+    margin-right: 20px;
+    display: inline-block;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: #fff;
 }
 
 .aIcon:hover {
-    transform: scale(100px);
+    transform: scale(1.2);
+    color: #ccc;
 }
-
 
 @media (max-width:650px) {
     .cajaUl {

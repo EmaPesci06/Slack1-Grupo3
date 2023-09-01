@@ -3,7 +3,7 @@ const convertirValor = (moneda, divisa) => {
     let resultado = ""
 
     if (divisa === "DOLAR BLUE" && moneda >= 0) {
-        let newValue = moneda / 735
+        let newValue = moneda / 725
         return resultado = newValue.toFixed(2)
     }
     else if (divisa === "DOLAR" && moneda >= 0) {
@@ -25,7 +25,6 @@ const convertirValor = (moneda, divisa) => {
     else {
         return resultado = "La conversion no se pudo realizar"
     }
-
 }
 
 
@@ -35,6 +34,10 @@ document.getElementById('result').addEventListener('click', function () {
 
     const resultado = convertirValor(inputValor, selectValue);
 
-    document.getElementById('resultBox').textContent = `La cantidad es: $ ${resultado}`;
-
+    if (isNaN(resultado)) {
+        document.getElementById('resultBox').innerHTML = `${resultado}`;
+    }
+    else {
+        document.getElementById('resultBox').innerHTML = `La cantidad es: $ ${resultado}`;
+    }
 });

@@ -14,6 +14,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="../assets/Logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
 </head>
@@ -24,33 +26,123 @@
             <a href="#">
                 <img src="../assets/Logo.png" alt="logo" class="img">
             </a>
-            <h1 class="encabezado">Banco Innovación Financiera
+            <h1 class="encabezado">Banco Innovación Financiera</h1>
+            <a href="../index.html" class="logout"><i class='bx bx-log-out'></i></a>
         </div>
-        </h1>
     </header>
 
-    <nav class="nav">
-        <h3 class="navbar">Menú</h3>
-        <ul class="menu">
-            <li><a href="../index.html" class="li">Inicio</a></li>
-            <li><a href="cuentas.html" class="li">Cuentas</a></li>
-            <li><a href="tranferencias.html" class="li">Transferencias</a></li>
-            <li><a href="pagos.html" class="li">Pagos</a></li>
-        </ul>
+    <div class="contenedorNyM">
 
-        <div class="contenedorf">
-            <h3>Funciones</h3>
+
+
+        <nav class="navP">
+            <h3 class="navbar">Menú</h3>
             <ul class="menu">
-                <li><a href="moneda.html" class="li">Conversion de Moneda</a></li>
-                <li><a href="prestamos.html" class="li">Calculadora de Prestamos</a></li>
+                <li><a href="inicio.html" class="li">Inicio</a></li>
+                <li><a href="cuentas.html" class="li">Cuentas</a></li>
+                <li><a href="tranferencias.html" class="li">Transferencias</a></li>
+                <li><a href="pagos.html" class="li">Pagos</a></li>
             </ul>
-        </div>
-    </nav>
 
-    <main class="main">
-        <h2>Transferencias</h2>
-        </div>
-    </main>
+            <div class="contenedorf">
+                <h3>Funciones</h3>
+                <ul class="menu">
+                    <li><a href="moneda.html" class="li">Conversion de Moneda</a></li>
+                    <li><a href="prestamos.html" class="li">Calculadora de Prestamos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main mainT">
+            <h2>Transferencias</h2>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="table-dark">Fecha</th>
+                        <th class="table-dark">Origen</th>
+                        <th class="table-dark">Destino</th>
+                        <th class="table-dark">Monto</th>
+                        <th class="table-dark">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023/08/01</td>
+                        <td>Martin Rodriguez</td>
+                        <td>Carlos Salvatierra</td>
+                        <td>$500</td>
+                        <td>Compra en línea</td>
+                    </tr>
+                    <tr>
+                        <td>2023/08/05</td>
+                        <td>Nicolas Betti</td>
+                        <td>Emanuel Pesci</td>
+                        <td>$300</td>
+                        <td>Pago de factura</td>
+                    </tr>
+                    <tr>
+                        <td>2023/08/10</td>
+                        <td>Marcos Lopez</td>
+                        <td>Julian Alvarez</td>
+                        <td>$800</td>
+                        <td>Transferencia mensual</td>
+                    </tr>
+                    <tr>
+                        <td>2023/08/15</td>
+                        <td>Charles Leclerc</td>
+                        <td>Carlos Sainz</td>
+                        <td>$200</td>
+                        <td>Reembolso</td>
+                    </tr>
+                    <tr>
+                        <td>2023/08/20</td>
+                        <td>Francis Ngannu</td>
+                        <td>Jon Jones</td>
+                        <td>$700</td>
+                        <td>Compra en tienda</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="formContainer">
+                <form id="formTransfer">
+                    <h3 class="text-center mt-3">Nueva Transferencia</h3>
+                    <div class="mb-3">
+                        <label for="date" class="form-label ">Fecha</label>
+                        <input type="date" class="form-control" id="date" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="origin" class="form-label">Origen</label>
+                        <input type="text" class="form-control" id="origin">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="destiny" class="form-label">Destino</label>
+                        <input type="text" class="form-control" id="destiny">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Monto</label>
+                        <input type="number" class="form-control" id="amount">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="choices" class="form-label">Elija el tipo de cuenta</label>
+                        <select class="form-select" aria-label="" id="choices">
+                            <option value="1">Compra en linea</option>
+                            <option value="2">Pago de factura</option>
+                            <option value="3">Transferencia Manual</option>
+                            <option value="4">Reembolso</option>
+                            <option value="5">Compra en tienda</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-4">Enviar</button>
+                </form>
+            </div>
+        </main>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -67,25 +159,24 @@
             </div>
 
             <div class="cajaIcons">
-                <h3>Redes Sociales</h3>
                 <a href="#" class="aIcon animate__pulse">
-                    Instagram
                     <i class='bx bxl-instagram'></i>
                 </a>
                 <a href="#" class="aIcon">
-                    Facebook
                     <i class='bx bxl-facebook-circle'></i>
                 </a>
                 <a href="#" class="aIcon">
-                    Twitter
                     <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="#" class="aIcon">
+                    <i class='bx bxl-whatsapp'></i>
                 </a>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="../script.js"></script>
+    <script src="../scripts/transferencia.js"></script>
 </body>
 
 </html>

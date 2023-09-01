@@ -14,6 +14,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="../assets/Logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
 </head>
@@ -24,53 +26,56 @@
             <a href="#">
                 <img src="../assets/Logo.png" alt="logo" class="img">
             </a>
-            <h1 class="encabezado">Banco Innovación Financiera
+            <h1 class="encabezado">Banco Innovación Financiera</h1>
+            <a href="../index.html" class="logout"><i class='bx bx-log-out'></i></a>
         </div>
-        </h1>
     </header>
 
-    <nav class="nav">
-        <h2 class="navbar">Menú</h2>
-        <ul class="menu">
-            <li><a href="../index.html" class="li">Inicio</a></li>
-            <li><a href="cuentas.html" class="li">Cuentas</a></li>
-            <li><a href="tranferencias.html" class="li">Transferencias</a></li>
-            <li><a href="pagos.html" class="li">Pagos</a></li>
-        </ul>
+    <div class="contenedorNyM">
 
-        <div class="contenedorf">
-            <h2>Funciones</h2>
+
+        <nav class="navP">
+            <h2 class="navbar">Menú</h2>
             <ul class="menu">
-                <li><a href="moneda.html" class="li">Conversion de Moneda</a></li>
-                <li><a href="prestamos.html" class="li">Calculadora de Prestamos</a></li>
+                <li><a href="inicio.html" class="li">Inicio</a></li>
+                <li><a href="cuentas.html" class="li">Cuentas</a></li>
+                <li><a href="tranferencias.html" class="li">Transferencias</a></li>
+                <li><a href="pagos.html" class="li">Pagos</a></li>
             </ul>
-        </div>
-    </nav>
-    <main class="main">
-        <div class="containerPrestamo">
 
-            <h2 class="tituloPrestamo">Calculadora de Prestamos</h2>
-            <div class="calculator">
-                <div class="containerLabel">
-                    <label for="loanAmount">Monto del Préstamo:</label>
-                    <input class="inputPrestamo" type="number" id="loanAmount" step="0.01" required>
-                </div>
-
-                <div class="containerLabel">
-                    <label for="interestRate">Tasa de Interés (% anual):</label>
-                    <input class="inputPrestamo" type="number" id="interestRate" step="0.01" required>
-                </div>
-
-                <div class="containerLabel">
-                    <label for="loanTerm">Plazo del Préstamo (años):</label>
-                    <input class="inputPrestamo" type="number" id="loanTerm" required>
-                </div>
-                <button id="calculateButton">Calcular</button>
-
-                <div id="result"></div>
+            <div class="contenedorf">
+                <h2>Funciones</h2>
+                <ul class="menu">
+                    <li><a href="moneda.html" class="li">Conversion de Moneda</a></li>
+                    <li><a href="prestamos.html" class="li">Calculadora de Prestamos</a></li>
+                </ul>
             </div>
-        </div>
-    </main>
+        </nav>
+        <main class="main">
+            <div class="containerPrestamo">
+                <h2 class="tituloPrestamo">Calculadora de Prestamos</h2>
+                <div class="calculator">
+                    <div class="containerLabel">
+                        <label for="montoPrestamo">Monto del Préstamo:</label>
+                        <input class="inputPrestamo" type="number" id="montoPrestamo" step="0.01" required>
+                    </div>
+
+                    <div class="containerLabel">
+                        <label for="tasa">Tasa de Interés (% anual):</label>
+                        <input class="inputPrestamo" type="number" id="tasa" step="0.01" required>
+                    </div>
+
+                    <div class="containerLabel">
+                        <label for="años">Plazo del Préstamo (años):</label>
+                        <input class="inputPrestamo" type="number" id="años" required>
+                    </div>
+                    <button id="calculateButton">Calcular</button>
+
+                    <div id="result"></div>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -87,18 +92,17 @@
             </div>
 
             <div class="cajaIcons">
-                <h3>Redes Sociales</h3>
                 <a href="#" class="aIcon animate__pulse">
-                    Instagram
                     <i class='bx bxl-instagram'></i>
                 </a>
                 <a href="#" class="aIcon">
-                    Facebook
                     <i class='bx bxl-facebook-circle'></i>
                 </a>
                 <a href="#" class="aIcon">
-                    Twitter
                     <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="#" class="aIcon">
+                    <i class='bx bxl-whatsapp'></i>
                 </a>
             </div>
         </div>
